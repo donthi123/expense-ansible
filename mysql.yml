@@ -18,7 +18,7 @@ tasks:
     - name: setup mysql password
       ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
 
-#
+
 
 
 
