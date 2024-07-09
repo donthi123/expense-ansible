@@ -34,3 +34,4 @@
       ansible.builtin.service:
         state: restarted
         name: nginx
+        enable: yes
