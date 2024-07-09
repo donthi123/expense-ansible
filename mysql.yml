@@ -1,4 +1,4 @@
-- name: backend setup
+- name: mysql setup
   hosts: all
   become: yes
   tasks:
