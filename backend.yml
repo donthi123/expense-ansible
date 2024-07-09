@@ -45,10 +45,12 @@ tasks:
       src: backend.service
       dest: /etc/systemd/system/backend.service
 
-  - name: Install mysql client
-    ansible.builtin.dnf:
-      name: mysql
-      state: installed
+  - name: Install Python MySQL client
+    ansible.builtin.pip:
+      name:
+       - PyMySQL
+       - cryptography
+      executable: pip3.9
 
   - name: Load Schema
     Community.mysql.mysql_db:
@@ -65,7 +67,7 @@ tasks:
       name: backend
       state: restarted
       enabled: yes
-      demon_reload: yes
+      daemon_reload: yes
 
 
 
