@@ -3,7 +3,7 @@
   become: yes
   tasks:
 
-    - name: enable NodeJS version module
+    - name: disable default nodejs version module
       ansible.builtin.shell: dnf module disable nodejs -y
 
     - name: Enable NodeJS module for v20
@@ -37,7 +37,7 @@
 
     - name: Download NodeJS dependencies
       community.general.npm:
-       path: app
+       path: /app
        state: latest
 
     - name: copy Backend Service file
