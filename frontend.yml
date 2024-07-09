@@ -3,12 +3,12 @@
   become: yes
   tasks:
 
-    - name: Install Nginx
+    - name: Install nginx
       ansible.builtin.dnf:
-        name: Nginx
+        name: nginx
         state: latest
 
-    - name: copy Expense Nginx configuration
+    - name: copy Expense nginx configuration
       ansible.builtin.copy:
         src: expense.conf
         dest: /etc/nginx/default.d/expense.conf
