@@ -29,7 +29,7 @@
        state: directory
 
     - name: Download and extract app content
-      ansible.builtin.unarchive:
+      ansible.builtin.unarc hive:
        src: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
        dest: /app
        remote_src: yes
@@ -51,6 +51,10 @@
          - PyMySQL
          - cryptography
        executable: pip3.9
+    - name: install mysql clent
+      ansible.builtin.dnf:
+       name: mysql
+       state: installed
 
     - name: Load Schema
       community.mysql.mysql_db:
