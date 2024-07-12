@@ -1,22 +1,9 @@
 - name: mysql setup
   hosts: all
   become: yes
-  tasks:
+  roles:
+    - mysql
 
-    - name: Install mysql server
-      ansible.builtin.dnf:
-        name: mysql-server
-        state: installed
-
-    - name: Start mysql service
-      ansible.builtin.systemd_service:
-        name: mysqld
-        state: started
-        enabled: yes
-
-
-    - name: setup mysql password
-      ansible.builtin.shell: mysql_secure_installation --set-root-pass ExpenseApp@1
 
 
 
