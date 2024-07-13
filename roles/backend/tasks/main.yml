@@ -13,22 +13,10 @@
   ansible.builtin.user:
     name: expense
 
-- name: clean the old content
-  ansible.builtin.file:
-    path: /app
-    state: absent
-
-- name: create app directory
-  ansible.builtin.file:
-    path: /app
-    state: directory
-
-- name: Download and extract app content
-  ansible.builtin.unarchive:
-    src: https://expense-artifacts.s3.amazonaws.com/expense-backend-v2.zip
-    dest: /app
-    remote_src: yes
-
+- name: Import App Pre Requisites
+  ansible.builtin.import_role:
+    name: common
+    tasks_from: app-pre-req
 
 - name: Download NodeJS dependencies
   community.general.npm:
