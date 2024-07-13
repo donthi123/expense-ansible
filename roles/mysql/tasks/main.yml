@@ -23,6 +23,7 @@
     login_host: mysql-dev.donthi123.online
     filter: version
   register: mysql_connection_output
+  ignore_errors: yes
 
 
 - name: setup mysql password
