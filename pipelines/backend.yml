@@ -9,7 +9,7 @@ pipelines:
         auto_update: true
         branch: main
         secure_variable:
-          TESTV: "AES:SGvlYvZL4zR4fUNCKKnwbA==:Nev7o0FC71x+QNDwZXW8pg=="
+          TESTV: "AES:cf4GO2ogEtUnQLATHte1gA==:jVlTpDikDsgyFdXLm1whYRyriwctZRqg34oTe8e/Cgw="
     stages:
       - DEV:
           fetch_materials: true
