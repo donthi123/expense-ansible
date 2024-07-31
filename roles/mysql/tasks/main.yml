@@ -19,7 +19,7 @@
 - name: check the DB connection with our password
   community.mysql.mysql_info:
     login_user: root
-    login_password: {{mysql_root_password}}
+    login_password: "{{mysql_root_password}}"
     login_host: mysql-dev.donthi123.online
     filter: version
   register: mysql_connection_output
