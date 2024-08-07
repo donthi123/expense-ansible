@@ -3,5 +3,5 @@
 
 
 - name: Install Logstash
-  ansible.builtin.import_file:
+  ansible.builtin.import_role:
     name: logstash
