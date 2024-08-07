@@ -1,2 +1,7 @@
 - name: set prompt with component
   ansible.builtin.shell: set-prompt {{ component }}-{{ env }}
+
+
+- name: Install Logstash
+  ansible.builtin.import_file:
+    name: logstash
