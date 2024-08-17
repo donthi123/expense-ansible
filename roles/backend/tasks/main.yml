@@ -47,7 +47,7 @@
     target: /app/schema/backend.sql
     login_user: root
     login_password: "{{mysql_root_password}}"
-    login_host: mysql-{{env}}.donthi123.online
+    login_host: "{{ DB_HOST }}"
 
 
 - name: Start backend service
